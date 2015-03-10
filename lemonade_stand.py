@@ -21,8 +21,7 @@ class LemonadeStand(object):
         if num_lemonades > self.supply:
             raise NotEnoughLemonsException("Not enough supply for that many lemonades")
 
-        price = self.get_total(num_lemonades)
-        income = price * num_lemonades
+        income = self.get_total(num_lemonades)
         timestamp = time.time()
 
         sale = {
