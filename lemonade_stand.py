@@ -6,6 +6,10 @@ class LemonadeStand(object):
     def __init__(self, num_lemons, price):
         self.supply = int(num_lemons)
         self.price = float(price)
+        if self.supply < 0:
+            raise ValueError("Supply cannot be negative")
+        if self.price <= 0:
+            raise ValueError("Price must be positive")
         self.sales = []
 
     def get_total(self, num_lemonades):
