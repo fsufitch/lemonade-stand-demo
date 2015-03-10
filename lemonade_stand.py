@@ -33,13 +33,9 @@ class LemonadeStand(object):
         return sale
 
     def total_lemonades_sold(self):
-        if not self.sales:
-            return 0
         return sum([s['amount'] for s in self.sales])
 
     def total_income(self):
-        if not self.sales:
-            return 0
         return sum([s['income'] for s in self.sales])
 
     def sale_window(self):
