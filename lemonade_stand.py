@@ -44,6 +44,6 @@ class LemonadeStand(object):
     def sale_window(self):
         if not self.sales:
             raise ValueError("No sales yet, cannot calculate sales window")
-        sale_window_start = min([s['time'] for s in self.sales])
-        sale_window_end = max([s['time'] for s in self.sales])
+        sale_window_start = self.sales[0]['time']
+        sale_window_end = self.sales[-1]['time']
         return sale_window_start, sale_window_end
