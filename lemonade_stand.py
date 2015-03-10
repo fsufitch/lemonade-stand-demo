@@ -4,8 +4,8 @@ class NotEnoughLemonsException(Exception): pass
 
 class LemonadeStand(object):
     def __init__(self, num_lemons, price):
-        self.supply = num_lemons
-        self.price = price
+        self.supply = int(num_lemons)
+        self.price = float(price)
         self.sales = []
 
     def get_total(self, num_lemonades):
